@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                var x = document.forms["Books"] ["fname"].value;
+                if (x == "") {
+                    alert("Name must be filled out.");
+                    return false;
+                }
+                else document.write("Name submitted.")
+            }
+            function validateForm() {
+                var y = document.forms["Music"] ["fname"].value;
+                if (y == "") {
+                    alert("Age must be filled out.");
+                    return false;
+                }
+                else document.write("Age submitted.")
+            }
+        </script>
+    </head>
+    <body>
+        <form name="Books" onsubmit="validateForm()">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+        <form name="Music" onsubmit="validateForm()">
+            Age: <input type="number" name="fname">
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+    </body>
+</html>
